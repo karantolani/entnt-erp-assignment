@@ -1,0 +1,26 @@
+.Products, .Orders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr;
+    row-gap: 2.4rem;
+}
+
+
+@media (max-width: 768px) and (min-width: 426px) {
+    .Products, .Orders {
+        grid-template-columns: max-content 1fr max-content;
+        column-gap: 4rem;
+    }
+
+    .page .placeholder-div {
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .Products, .Orders {
+        grid-template-columns: 1fr;
+        row-gap: 1.2rem;
+        column-gap: 0;
+    }
+}
